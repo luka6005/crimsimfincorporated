@@ -13,7 +13,6 @@
             line-height: 1.6;
         }
 
-        /* Heder sa firmom - drugačija boja */
         header { 
             background: linear-gradient(#2c0a0a, #4a0f0f); 
             color: white; 
@@ -134,12 +133,23 @@
         button:hover { background: #e02a44; }
 
         .disclaimer { 
-            font-size: 0.87rem; 
-            color: #aaaaaa; 
-            margin-top: 25px; 
+            font-size: 0.9rem; 
+            color: #cccccc; 
+            margin-top: 20px; 
             line-height: 1.5;
         }
         .privacy-link { color: #c8102e; text-decoration: underline; }
+
+        .checkbox-container {
+            margin: 20px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        .checkbox-container input {
+            width: auto;
+            margin-right: 10px;
+            margin-top: 4px;
+        }
 
         footer { 
             background: #000000; 
@@ -153,7 +163,6 @@
             margin-bottom: 20px;
             font-size: 1.1rem;
         }
-
     </style>
 </head>
 <body>
@@ -210,19 +219,24 @@
                 <label for="message">Message / Interested Truck *</label>
                 <textarea id="message" rows="5" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <!-- Checkbox + Novi disclaimer -->
+                <div class="checkbox-container">
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent" style="cursor: pointer;">
+                        By providing a telephone number and submitting the form, you are consenting to receive SMS messages from 
+                        <strong>CRIMSIMF INC</strong> with promotional offers (approximately 2-4 messages per month). 
+                        Message and data rates may apply. Reply HELP for assistance or STOP to opt out.<br><br>
+                        By checking this box, you agree to our 
+                        <a href="privacy.html" class="privacy-link">Terms & Conditions</a> and 
+                        <a href="privacy.html" class="privacy-link">Privacy Policy</a>.
+                    </label>
+                </div>
 
-                <p class="disclaimer">
-                    By providing a telephone number and submitting the form, you are consenting to be contacted by SMS text message and agreeing to our 
-                    <a href="privacy.html" class="privacy-link">Privacy Policy</a>.<br><br>
-                    Message frequency may vary. Message and data rates may apply. 
-                    Reply STOP to opt out of further messaging. Reply HELP for more information.
-                </p>
+                <button type="submit">Send Message</button>
             </form>
         </div>
     </div>
 
-    <!-- Footer sa adresom -->
     <footer>
         <div class="footer-info">
             <strong>CRIMSIMF INCORPORATED</strong><br>
